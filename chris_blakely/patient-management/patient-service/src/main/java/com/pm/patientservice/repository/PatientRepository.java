@@ -1,0 +1,18 @@
+package com.pm.patientservice.repository;
+
+import java.util.UUID;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.pm.patientservice.model.Patient;
+
+// JPA Repository
+// Handles interactions with the database
+
+@Repository
+public interface PatientRepository extends JpaRepository<Patient, UUID> {
+    boolean existsByEmail(String email);
+    // Ignores the email if update the same user
+    boolean existsByEmailAndIdNot(String email, UUID id);
+}

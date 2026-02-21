@@ -1,0 +1,4 @@
+- pom.xml is the heart of the project.
+- Application.java is the entry point of the application.
+- To find packages go to maven central on your browser.
+- To run the project using maven on windows -> `.\mvnw.cmd spring-boot:run`
